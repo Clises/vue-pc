@@ -1,0 +1,29 @@
+@import "../var";
+@import "../mixins/mixins";
+
+
+/* dialog
+*********************/
+@include b(dialog){
+  @include e(con){
+    @at-root .el-message-box & {
+      margin:40px;
+    }
+    text-align: center;
+    &.text-left{
+      text-align:left;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    h3{
+      font-size:14px;
+      margin:5px 0;
+    }
+    p{
+      margin:5px 0;
+    }
+  }
+}
+
+
