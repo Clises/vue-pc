@@ -1,5 +1,5 @@
 'use strict'
-// Template version: 1.3.1
+// Template version: 1.2.5
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
@@ -10,40 +10,65 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/': {
+        target: 'http://114.215.82.218:8097', // 你接口的域名
+        secure: false,      // 如果是https接口，需要配置这个参数
+        changeOrigin: true     // 如果接口跨域，需要进行这个参数配置
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8108, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+    // Use Eslint Loader?
+    // If true, your code will be linted during bundling and
+    // linting errors and warnings will be shown in the console.
+    useEslint: true,
+    // If true, eslint errors and warnings will also be shown in the error overlay
+    // in the browser.
+    showEslintErrorsInOverlay: false,
+
     /**
      * Source Maps
      */
 
     // https://webpack.js.org/configuration/devtool/#development
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval-source-map',
 
     // If you have problems debugging vue-files in devtools,
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true
+    // CSS Sourcemaps off by default because relative paths are "buggy"
+    // with this option, according to the CSS-Loader README
+    // (https://github.com/webpack/css-loader#sourcemaps)
+    // In our experience, they generally work as expected,
+    // just be aware of this issue when enabling this option.
+    cssSourceMap: false,
   },
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../../console/index.html'),
+    // index: '/Users/cuijiudai/project/plus_console_static/console/index.html',
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    //assetsRoot: path.resolve(__dirname, '../dist'),
+
+    //assetsRoot: '/data/bin/plus_business/webapps/ROOT/WEB-INF/classes/static',
+    //assetsSubDirectory: 'static',
+    //assetsPublicPath: '/',
+    // assetsRoot: '/Users/cuijiudai/project/plus_console_static/',
+    assetsRoot: path.resolve(__dirname, '../../../console'),
+    assetsSubDirectory: 'console',
+    assetsPublicPath: 'http://static.1sight.cn/console/',
 
     /**
      * Source Maps

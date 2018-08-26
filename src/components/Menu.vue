@@ -1,10 +1,9 @@
 <template>
   <el-aside width='200px'>
     <ul class="menu">
-      <li :class="cpath == '/index' ?'active' : ''" @click="linkto('/index')">index</li>
-      <li :class="cpath == '/about' ?'active' : ''" @click="linkto('/about')">about</li>
-      <li :class="cpath == '/my' ?'active' : ''" @click="linkto('/home/my')">my</li>
-
+      <li :class="cpath == '/home/index' ?'active' : ''" @click="linkto('/home/index')">首页一些东西</li>
+      <li :class="cpath == '/home/about' ?'active' : ''" @click="linkto('/home/about')">前端有什么难的</li>
+      <li :class="cpath == '/home/my' ?'active' : ''" @click="linkto('/home/my')">个人中心</li>
     </ul>
   </el-aside>
 </template>
@@ -15,6 +14,7 @@
       return {}
     },
     created() {
+      console.log(this.$store);
     },
     computed: mapState({
       cpath: state => state.curRouter,
@@ -31,8 +31,17 @@
 </script>
 
 <style lang="scss" type="text/scss">
+  .menu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    li{
+      width: 100%;
+      height: 30px;
+      text-align: center;
+    }
+  }
   .active {
-
       color: red;
   }
 </style>

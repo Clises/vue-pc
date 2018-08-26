@@ -1,10 +1,10 @@
 <template>
-    <div id="my">
-      我的
+    <div id="about">
+      about
     </div>
 </template>
 <script>
-    export default {
+  export default {
         data() {
             return {}
         },
@@ -13,7 +13,8 @@
         },
         computed: {},
         methods: {},
-        components: {},
+        components: {
+        },
         mounted() {
 
         }
