@@ -2,7 +2,7 @@
   <el-aside width='200px'>
     <ul class="menu">
       <li :class="cpath == '/home/index' ?'active' : ''" @click="linkto('/home/index')">首页一些东西</li>
-      <li :class="cpath == '/home/about' ?'active' : ''" @click="linkto('/home/about')">前端有什么难的</li>
+      <li :class="cpath == '/home/about' ?'active' : ''" @click="linkto('/home/about')">图表</li>
       <li :class="cpath == '/home/my' ?'active' : ''" @click="linkto('/home/my')">个人中心</li>
     </ul>
   </el-aside>
