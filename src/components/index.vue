@@ -146,7 +146,6 @@
             });
             if (_da2.length >=0) this.loading = false;
             this.tableData2 = _da2;
-
           } else {
             var data = [];
             res.result.forEach((v, i) => {
@@ -163,7 +162,6 @@
 
         })
       },
-
       handtypechange(val) {
         console.log(val)
         if (val != 3) {
@@ -174,7 +172,6 @@
     },
     components: {},
     mounted() {
-
     }
   }
 </script>

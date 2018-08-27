@@ -1,6 +1,6 @@
 <template>
     <div id="about">
-      about
+      图表
     </div>
 </template>
 <script>
