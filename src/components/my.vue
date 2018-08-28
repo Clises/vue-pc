@@ -58,7 +58,7 @@
 
     },
     methods: {
-      //弹cen
+      //弹cenpage-wrapper
       showRestPwd() {
         console.log(1)
         this.isShowResetPwd = true;
