@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <el-form :model="userInfoForm" status-icon :rules="rules" ref="userInfoForm" label-width="100px"
              class="form-content">
       <el-form-item label="昵称" prop="username">

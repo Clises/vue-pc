@@ -115,6 +115,7 @@
         var myChart = echarts.init(document.getElementById('salebar'));
         var tableData = this.tableData;
         var that = this
+        //数据请求
         myChart.setOption({
           color: ['#B23AEE', '#fd912a', '#800000', '#FFD700', '#50abf2', '#d6395b', '#B3EE3A', '#008B8B', '#e53d00', '#537e75'],
 
